@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>নবান্ন | Barakah Food Products Limited</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial,"Noto Sans Bengali",sans-serif;
+  background:#fffaf0;
+  color:#222;
+}
+
+header{
+  background:#7d0000;
+  color:white;
+  padding:18px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:32px;
+  font-weight:bold;
+  color:#ffd45c;
+}
+
+.logo small{
+  display:block;
+  color:white;
+  font-size:11px;
+  font-weight:normal;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+}
+
+.hero{
+  min-height:80vh;
+  padding:70px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  background:linear-gradient(135deg,#fff1c9,#fffaf0);
+}
+
+.hero-text{
+  max-width:600px;
+}
+
+.hero-text span{
+  color:#a06b00;
+  font-weight:bold;
+}
+
+.hero h1{
+  color:#7d0000;
+  font-size:65px;
+  margin:10px 0;
+}
+
+.hero h2{
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  color:#555;
+  font-size:18px;
+  margin-bottom:25px;
+}
+
+.button{
+  display:inline-block;
+  background:#7d0000;
+  color:white;
+  text-decoration:none;
+  padding:14px 25px;
+  border-radius:30px;
+  margin-right:8px;
+  font-weight:bold;
+}
+
+.button:hover{
+  background:#b8860b;
+}
+
+.product-box{
+  width:360px;
+  height:360px;
+  background:linear-gradient(145deg,#7d0000,#c71919);
+  border-radius:30px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  box-shadow:0 20px 50px #0003;
+  text-align:center;
+}
+
+.product-box .brand{
+  font-size:45px;
+  color:#ffd45c;
+  font-weight:bold;
+}
+
+.food{
+  font-size:80px;
+  margin:15px;
+}
+
+.product-box h3{
+  font-size:28px;
+}
+
+section{
+  padding:70px 7%;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.title h2{
+  color:#7d0000;
+  font-size:38px;
+}
+
+.title p{
+  color:#666;
+  margin-top:8px;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 8px 30px #00000012;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card-icon{
+  height:170px;
+  border-radius:15px;
+  background:linear-gradient(145deg,#7d0000,#bd1818);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:65px;
+  margin-bottom:18px;
+}
+
+.card h3{
+  color:#7d0000;
+  font-size:25px;
+}
+
+.card p{
+  color:#666;
+  margin-top:8px;
+}
+
+.about{
+  background:#7d0000;
+  color:white;
+  text-align:center;
+}
+
+.about h2{
+  color:#ffd45c;
+  font-size:38px;
+  margin-bottom:20px;
+}
+
+.about p{
+  max-width:800px;
+  margin:auto;
+  font-size:17px;
+}
+
+.contact{
+  text-align:center;
+}
+
+.contact-box{
+  max-width:650px;
+  margin:auto;
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 8px 30px #00000012;
+}
+
+.contact-box p{
+  margin:12px;
+}
+
+footer{
+  background:#260000;
+  color:white;
+  text-align:center;
+  padding:25px;
+}
+
+footer strong{
+  color:#ffd45c;
+}
+
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  background:#25d366;
+  color:white;
+  padding:14px 20px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+@media(max-width:768px){
+
+  header{
+    padding:15px 5%;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+    padding:55px 5%;
+  }
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  .hero h2{
+    font-size:23px;
+  }
+
+  .product-box{
+    width:100%;
+    max-width:350px;
+    height:330px;
+  }
+
+  section{
+    padding:55px 5%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+নবান্ন
+<small>Barakah Food Products Limited</small>
+</div>
+
+<nav>
+<a href="#home">হোম</a>
+<a href="#products">পণ্য</a>
+<a href="#about">আমাদের সম্পর্কে</a>
+<a href="#contact">যোগাযোগ</a>
+</nav>
+
+</header>
+
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<span>স্বাদে ঐতিহ্য • মানে আস্থা</span>
+
+<h1>নবান্ন</h1>
+
+<h2>প্রতিদিনের খাবারে দেশীয় স্বাদের ছোঁয়া</h2>
+
+<p>
+বারাকাহ ফুড প্রোডাক্টস লিমিটেড-এর
+একটি সম্ভাবনাময় খাদ্য ব্র্যান্ড।
+মানসম্মত ও সুস্বাদু খাদ্যপণ্য মানুষের কাছে
+পৌঁছে দেওয়াই আমাদের লক্ষ্য।
+</p>
+
+<a href="#products" class="button">আমাদের পণ্য</a>
+
+<a href="#contact" class="button">যোগাযোগ</a>
+
+</div>
+
+
+<div class="product-box">
+
+<div class="brand">নবান্ন</div>
+
+<div class="food">🥜</div>
+
+<h3>প্রিমিয়াম চানাচুর</h3>
+
+<p>Crunchy • Tasty • Fresh</p>
+
+</div>
+
+</section>
+
+
+<section id="products">
+
+<div class="title">
+
+<h2>আমাদের পণ্য</h2>
+
+<p>নবান্ন পরিবারের খাদ্যপণ্য</p>
+
+</div>
+
+
+<div class="products">
+
+
+<div class="card">
+
+<div class="card-icon">🥜</div>
+
+<h3>চানাচুর</h3>
+
+<p>
+মচমচে ও সুস্বাদু নবান্ন চানাচুর।
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🌾</div>
+
+<h3>চাল</h3>
+
+<p>
+দৈনন্দিন খাবারের জন্য মানসম্মত চাল।
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🫘</div>
+
+<h3>ডাল</h3>
+
+<p>
+নির্বাচিত মানের ডাল।
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section class="about" id="about">
+
+<h2>বারাকাহ ফুড প্রোডাক্টস লিমিটেড</h2>
+
+<p>
+আমাদের লক্ষ্য বাংলাদেশের মানুষের জন্য
+মানসম্মত, সুস্বাদু ও নির্ভরযোগ্য খাদ্যপণ্য তৈরি করা।
+নবান্ন ব্র্যান্ডের মাধ্যমে আমরা দেশীয় স্বাদকে
+আধুনিকভাবে মানুষের কাছে পৌঁছে দিতে চাই।
+</p>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+<div class="title">
+
+<h2>যোগাযোগ</h2>
+
+<p>নবান্ন সম্পর্কে জানতে যোগাযোগ করুন</p>
+
+</div>
+
+<div class="contact-box">
+
+<p>
+<strong>কোম্পানি:</strong>
+Barakah Food Products Limited
+</p>
+
+<p>
+<strong>ব্র্যান্ড:</strong>
+নবান্ন
+</p>
+
+<p>
+<strong>ঠিকানা:</strong>
+নওগাঁ, বাংলাদেশ
+</p>
+
+<p>
+<strong>Phone:</strong>
+আপনার ফোন নম্বর
+</p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+© 2026 <strong>নবান্ন</strong>
+— Barakah Food Products Limited
+
+<br>
+
+All Rights Reserved.
+
+</footer>
+
+
+<a class="whatsapp" href="#">
+WhatsApp
+</a>
+
+</body>
+</html>
